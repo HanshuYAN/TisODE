@@ -1,5 +1,5 @@
 # TisODE
-This repository provides codes for [TisODE](https://openreview.net/forum?id=B1e9Y2NYvS) (ICLR 2020).
+This repository provides codes for [TisODE](https://arxiv.org/abs/1910.05513) (ICLR 2020).
 
 **On Robustness of Neural Ordinary Differential Equations**  
 Hanshu YAN, Jiawei DU, Vincent TAN, Jiashi FENG  
