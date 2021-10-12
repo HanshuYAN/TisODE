@@ -1,0 +1,57 @@
+
+
+------ ******* ------ New Log ------ ******* ------
+/Public/yanhanshu/Projects/TisODE/codes4sharing/attack_mnist/main_cnn.py
+dir_model: ../../checkpoints/mnist/MNIST_CNN_gaus_1/model_best.pth
+FGSM 0.15: 0.855 FGSM 0.3: 0.5449999999999999, FGSM 0.5: 0.16800000000000004 PGD 0.2: 0  PGD 0.3 :0 black:0
+
+
+------ ******* ------ New Log ------ ******* ------
+/Public/yanhanshu/Projects/TisODE/codes4sharing/attack_mnist/main_cnn.py
+dir_model: ../../checkpoints/mnist/MNIST_CNN_gaus_2/model_best.pth
+FGSM 0.15: 0.855 FGSM 0.3: 0.524, FGSM 0.5: 0.16100000000000003 PGD 0.2: 0  PGD 0.3 :0 black:0
+
+
+------ ******* ------ New Log ------ ******* ------
+/Public/yanhanshu/Projects/TisODE/codes4sharing/attack_mnist/main_cnn.py
+dir_model: ../../checkpoints/mnist/MNIST_CNN_gaus_3/model_best.pth
+FGSM 0.15: 0.857 FGSM 0.3: 0.544, FGSM 0.5: 0.14300000000000002 PGD 0.2: 0  PGD 0.3 :0 black:0
+
+
+------ ******* ------ New Log ------ ******* ------
+/Public/yanhanshu/Projects/TisODE/codes4sharing/attack_mnist/main_ode.py
+dir_model: ../../checkpoints/mnist/MNIST_ODE_gaus_1/model_best.pth
+step_size: 0.1
+FGSM 0.15: 0.9410000000000001 FGSM 0.3: 0.723, FGSM 0.5: 0.19399999999999995 PGD 0.2: 0  PGD 0.3 :0 black:0
+
+
+------ ******* ------ New Log ------ ******* ------
+/Public/yanhanshu/Projects/TisODE/codes4sharing/attack_mnist/main_ode.py
+dir_model: ../../checkpoints/mnist/MNIST_ODE_gaus_2/model_best.pth
+step_size: 0.1
+FGSM 0.15: 0.933 FGSM 0.3: 0.708, FGSM 0.5: 0.21199999999999997 PGD 0.2: 0  PGD 0.3 :0 black:0
+
+
+------ ******* ------ New Log ------ ******* ------
+/Public/yanhanshu/Projects/TisODE/codes4sharing/attack_mnist/main_ode.py
+dir_model: ../../checkpoints/mnist/MNIST_ODE_gaus_3/model_best.pth
+step_size: 0.1
+FGSM 0.15: 0.938 FGSM 0.3: 0.7030000000000001, FGSM 0.5: 0.18799999999999994 PGD 0.2: 0  PGD 0.3 :0 black:0
+
+
+------ ******* ------ New Log ------ ******* ------
+/Public/yanhanshu/Projects/TisODE/codes4sharing/attack_mnist/main_tisode.py
+dir_model: ../../checkpoints/mnist/MNIST_tisode_gaus_1/model_best.pth
+FGSM 0.15: 0 FGSM 0.3: 0.749, FGSM 0.5: 0.375 PGD 0.2: 0  PGD 0.3 :0 black:0
+
+
+------ ******* ------ New Log ------ ******* ------
+/Public/yanhanshu/Projects/TisODE/codes4sharing/attack_mnist/main_tisode.py
+dir_model: ../../checkpoints/mnist/MNIST_tisode_gaus_2/model_best.pth
+FGSM 0.15: 0 FGSM 0.3: 0.786, FGSM 0.5: 0.359 PGD 0.2: 0  PGD 0.3 :0 black:0
+
+
+------ ******* ------ New Log ------ ******* ------
+/Public/yanhanshu/Projects/TisODE/codes4sharing/attack_mnist/main_tisode.py
+dir_model: ../../checkpoints/mnist/MNIST_tisode_gaus_3/model_best.pth
+FGSM 0.15: 0 FGSM 0.3: 0.781, FGSM 0.5: 0.278 PGD 0.2: 0  PGD 0.3 :0 black:0

@@ -1,0 +1,154 @@
+
+
+------ ******* ------ New Log ------ ******* ------
+/Storage2T/yanhanshu/Projects/athome/codes/mnist_0821/main_tisode_gaus.py
+isTrain: True
+isODE: True
+isSS: True
+isRandom: True
+device_ids: [0, 1]
+rtol: 0.001
+atol: 0.001
+adjoint: False
+step_size: 0.05
+TimePeriod: [0.0, 0.9, 1.0, 1.5]
+epoch_steady: 5
+w_steady: 0.01
+exp_name: MNIST_tisode_gaus_0
+resume: False
+start_epoch: 0
+end_epoch: 100
+data_aug: True
+batch_size: 128
+milestones: [30, 60, 90]
+lr: 0.001
+weight_decay: 0.0005
+gamma: 0.2
+dir_logging: ../../checkpoints/mnist_0821
+---- Model ----
+DataParallel(
+  (module): ODENet_tisode(
+    (downsampling_layers): Sequential(
+      (0): Conv2d(1, 64, kernel_size=(3, 3), stride=(1, 1))
+      (1): GroupNorm(32, 64, eps=1e-05, affine=True)
+      (2): ReLU(inplace)
+      (3): Conv2d(64, 64, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1))
+      (4): GroupNorm(32, 64, eps=1e-05, affine=True)
+      (5): ReLU(inplace)
+    )
+    (feature_layers): ODEfunc_tisode(
+      (relu): ReLU(inplace)
+      (conv1): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (norm1): GroupNorm(32, 64, eps=1e-05, affine=True)
+      (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (norm2): GroupNorm(32, 64, eps=1e-05, affine=True)
+    )
+    (fc_layers): Sequential(
+      (0): AdaptiveAvgPool2d(output_size=(1, 1))
+      (1): Flatten()
+      (2): Linear(in_features=64, out_features=10, bias=True)
+    )
+  )
+)
+Number of parameters: 141130
+---- Training ----
+Epoch 0000/0100 | Time 38.917s | Train Acc 0.9108 | Test Acc 0.9183 | Best epoch @ 0000 with Acc 0.9183 | lr: 0.001000
+Epoch 0001/0100 | Time 36.231s | Train Acc 0.9419 | Test Acc 0.9449 | Best epoch @ 0001 with Acc 0.9449 | lr: 0.001000
+Epoch 0002/0100 | Time 35.121s | Train Acc 0.9757 | Test Acc 0.9768 | Best epoch @ 0002 with Acc 0.9768 | lr: 0.001000
+Epoch 0003/0100 | Time 36.921s | Train Acc 0.9793 | Test Acc 0.9816 | Best epoch @ 0003 with Acc 0.9816 | lr: 0.001000
+Epoch 0004/0100 | Time 36.599s | Train Acc 0.9771 | Test Acc 0.9785 | Best epoch @ 0003 with Acc 0.9816 | lr: 0.001000
+Epoch 0005/0100 | Time 44.205s | Train Acc 0.9790 | Test Acc 0.9813 | Best epoch @ 0003 with Acc 0.9816 | lr: 0.001000
+Epoch 0006/0100 | Time 44.222s | Train Acc 0.9861 | Test Acc 0.9874 | Best epoch @ 0006 with Acc 0.9874 | lr: 0.001000
+Epoch 0007/0100 | Time 44.413s | Train Acc 0.9878 | Test Acc 0.9894 | Best epoch @ 0007 with Acc 0.9894 | lr: 0.001000
+Epoch 0008/0100 | Time 44.277s | Train Acc 0.9825 | Test Acc 0.9831 | Best epoch @ 0007 with Acc 0.9894 | lr: 0.001000
+Epoch 0009/0100 | Time 44.320s | Train Acc 0.9876 | Test Acc 0.9877 | Best epoch @ 0007 with Acc 0.9894 | lr: 0.001000
+Epoch 0010/0100 | Time 44.300s | Train Acc 0.9894 | Test Acc 0.9878 | Best epoch @ 0007 with Acc 0.9894 | lr: 0.001000
+Epoch 0011/0100 | Time 44.647s | Train Acc 0.9870 | Test Acc 0.9898 | Best epoch @ 0011 with Acc 0.9898 | lr: 0.001000
+Epoch 0012/0100 | Time 44.292s | Train Acc 0.9852 | Test Acc 0.9876 | Best epoch @ 0011 with Acc 0.9898 | lr: 0.001000
+Epoch 0013/0100 | Time 44.293s | Train Acc 0.9856 | Test Acc 0.9865 | Best epoch @ 0011 with Acc 0.9898 | lr: 0.001000
+Epoch 0014/0100 | Time 44.038s | Train Acc 0.9881 | Test Acc 0.9909 | Best epoch @ 0014 with Acc 0.9909 | lr: 0.001000
+Epoch 0015/0100 | Time 44.167s | Train Acc 0.9885 | Test Acc 0.9869 | Best epoch @ 0014 with Acc 0.9909 | lr: 0.001000
+Epoch 0016/0100 | Time 44.320s | Train Acc 0.9871 | Test Acc 0.9843 | Best epoch @ 0014 with Acc 0.9909 | lr: 0.001000
+Epoch 0017/0100 | Time 44.410s | Train Acc 0.9894 | Test Acc 0.9882 | Best epoch @ 0014 with Acc 0.9909 | lr: 0.001000
+Epoch 0018/0100 | Time 44.389s | Train Acc 0.9924 | Test Acc 0.9917 | Best epoch @ 0018 with Acc 0.9917 | lr: 0.001000
+Epoch 0019/0100 | Time 44.145s | Train Acc 0.9905 | Test Acc 0.9898 | Best epoch @ 0018 with Acc 0.9917 | lr: 0.001000
+Epoch 0020/0100 | Time 44.087s | Train Acc 0.9912 | Test Acc 0.9909 | Best epoch @ 0018 with Acc 0.9917 | lr: 0.001000
+Epoch 0021/0100 | Time 44.342s | Train Acc 0.9834 | Test Acc 0.9824 | Best epoch @ 0018 with Acc 0.9917 | lr: 0.001000
+Epoch 0022/0100 | Time 44.123s | Train Acc 0.9894 | Test Acc 0.9895 | Best epoch @ 0018 with Acc 0.9917 | lr: 0.001000
+Epoch 0023/0100 | Time 44.171s | Train Acc 0.9910 | Test Acc 0.9909 | Best epoch @ 0018 with Acc 0.9917 | lr: 0.001000
+Epoch 0024/0100 | Time 44.333s | Train Acc 0.9880 | Test Acc 0.9874 | Best epoch @ 0018 with Acc 0.9917 | lr: 0.001000
+Epoch 0025/0100 | Time 44.061s | Train Acc 0.9891 | Test Acc 0.9877 | Best epoch @ 0018 with Acc 0.9917 | lr: 0.001000
+Epoch 0026/0100 | Time 43.944s | Train Acc 0.9879 | Test Acc 0.9887 | Best epoch @ 0018 with Acc 0.9917 | lr: 0.001000
+Epoch 0027/0100 | Time 44.091s | Train Acc 0.9915 | Test Acc 0.9901 | Best epoch @ 0018 with Acc 0.9917 | lr: 0.001000
+Epoch 0028/0100 | Time 44.278s | Train Acc 0.9919 | Test Acc 0.9908 | Best epoch @ 0018 with Acc 0.9917 | lr: 0.001000
+Epoch 0029/0100 | Time 44.338s | Train Acc 0.9904 | Test Acc 0.9888 | Best epoch @ 0018 with Acc 0.9917 | lr: 0.001000
+Epoch 0030/0100 | Time 44.363s | Train Acc 0.9953 | Test Acc 0.9923 | Best epoch @ 0030 with Acc 0.9923 | lr: 0.000200
+Epoch 0031/0100 | Time 44.530s | Train Acc 0.9959 | Test Acc 0.9932 | Best epoch @ 0031 with Acc 0.9932 | lr: 0.000200
+Epoch 0032/0100 | Time 44.189s | Train Acc 0.9964 | Test Acc 0.9945 | Best epoch @ 0032 with Acc 0.9945 | lr: 0.000200
+Epoch 0033/0100 | Time 44.222s | Train Acc 0.9962 | Test Acc 0.9935 | Best epoch @ 0032 with Acc 0.9945 | lr: 0.000200
+Epoch 0034/0100 | Time 44.334s | Train Acc 0.9949 | Test Acc 0.9916 | Best epoch @ 0032 with Acc 0.9945 | lr: 0.000200
+Epoch 0035/0100 | Time 44.211s | Train Acc 0.9960 | Test Acc 0.9941 | Best epoch @ 0032 with Acc 0.9945 | lr: 0.000200
+Epoch 0036/0100 | Time 44.260s | Train Acc 0.9964 | Test Acc 0.9939 | Best epoch @ 0032 with Acc 0.9945 | lr: 0.000200
+Epoch 0037/0100 | Time 44.251s | Train Acc 0.9961 | Test Acc 0.9938 | Best epoch @ 0032 with Acc 0.9945 | lr: 0.000200
+Epoch 0038/0100 | Time 44.392s | Train Acc 0.9957 | Test Acc 0.9929 | Best epoch @ 0032 with Acc 0.9945 | lr: 0.000200
+Epoch 0039/0100 | Time 44.306s | Train Acc 0.9965 | Test Acc 0.9935 | Best epoch @ 0032 with Acc 0.9945 | lr: 0.000200
+Epoch 0040/0100 | Time 44.337s | Train Acc 0.9966 | Test Acc 0.9943 | Best epoch @ 0032 with Acc 0.9945 | lr: 0.000200
+Epoch 0041/0100 | Time 44.367s | Train Acc 0.9970 | Test Acc 0.9943 | Best epoch @ 0032 with Acc 0.9945 | lr: 0.000200
+Epoch 0042/0100 | Time 44.521s | Train Acc 0.9957 | Test Acc 0.9932 | Best epoch @ 0032 with Acc 0.9945 | lr: 0.000200
+Epoch 0043/0100 | Time 44.426s | Train Acc 0.9952 | Test Acc 0.9933 | Best epoch @ 0032 with Acc 0.9945 | lr: 0.000200
+Epoch 0044/0100 | Time 44.349s | Train Acc 0.9961 | Test Acc 0.9924 | Best epoch @ 0032 with Acc 0.9945 | lr: 0.000200
+Epoch 0045/0100 | Time 44.232s | Train Acc 0.9962 | Test Acc 0.9933 | Best epoch @ 0032 with Acc 0.9945 | lr: 0.000200
+Epoch 0046/0100 | Time 44.396s | Train Acc 0.9964 | Test Acc 0.9933 | Best epoch @ 0032 with Acc 0.9945 | lr: 0.000200
+Epoch 0047/0100 | Time 44.161s | Train Acc 0.9960 | Test Acc 0.9937 | Best epoch @ 0032 with Acc 0.9945 | lr: 0.000200
+Epoch 0048/0100 | Time 44.652s | Train Acc 0.9961 | Test Acc 0.9942 | Best epoch @ 0032 with Acc 0.9945 | lr: 0.000200
+Epoch 0049/0100 | Time 44.151s | Train Acc 0.9958 | Test Acc 0.9925 | Best epoch @ 0032 with Acc 0.9945 | lr: 0.000200
+Epoch 0050/0100 | Time 44.405s | Train Acc 0.9966 | Test Acc 0.9936 | Best epoch @ 0032 with Acc 0.9945 | lr: 0.000200
+Epoch 0051/0100 | Time 44.300s | Train Acc 0.9965 | Test Acc 0.9929 | Best epoch @ 0032 with Acc 0.9945 | lr: 0.000200
+Epoch 0052/0100 | Time 44.328s | Train Acc 0.9964 | Test Acc 0.9935 | Best epoch @ 0032 with Acc 0.9945 | lr: 0.000200
+Epoch 0053/0100 | Time 44.536s | Train Acc 0.9967 | Test Acc 0.9930 | Best epoch @ 0032 with Acc 0.9945 | lr: 0.000200
+Epoch 0054/0100 | Time 44.473s | Train Acc 0.9962 | Test Acc 0.9936 | Best epoch @ 0032 with Acc 0.9945 | lr: 0.000200
+Epoch 0055/0100 | Time 44.444s | Train Acc 0.9956 | Test Acc 0.9932 | Best epoch @ 0032 with Acc 0.9945 | lr: 0.000200
+Epoch 0056/0100 | Time 44.144s | Train Acc 0.9957 | Test Acc 0.9919 | Best epoch @ 0032 with Acc 0.9945 | lr: 0.000200
+Epoch 0057/0100 | Time 44.364s | Train Acc 0.9961 | Test Acc 0.9936 | Best epoch @ 0032 with Acc 0.9945 | lr: 0.000200
+Epoch 0058/0100 | Time 44.443s | Train Acc 0.9962 | Test Acc 0.9920 | Best epoch @ 0032 with Acc 0.9945 | lr: 0.000200
+Epoch 0059/0100 | Time 44.465s | Train Acc 0.9967 | Test Acc 0.9940 | Best epoch @ 0032 with Acc 0.9945 | lr: 0.000200
+Epoch 0060/0100 | Time 44.378s | Train Acc 0.9978 | Test Acc 0.9940 | Best epoch @ 0032 with Acc 0.9945 | lr: 0.000040
+Epoch 0061/0100 | Time 44.280s | Train Acc 0.9980 | Test Acc 0.9950 | Best epoch @ 0061 with Acc 0.9950 | lr: 0.000040
+Epoch 0062/0100 | Time 44.075s | Train Acc 0.9981 | Test Acc 0.9942 | Best epoch @ 0061 with Acc 0.9950 | lr: 0.000040
+Epoch 0063/0100 | Time 44.593s | Train Acc 0.9975 | Test Acc 0.9944 | Best epoch @ 0061 with Acc 0.9950 | lr: 0.000040
+Epoch 0064/0100 | Time 44.178s | Train Acc 0.9977 | Test Acc 0.9937 | Best epoch @ 0061 with Acc 0.9950 | lr: 0.000040
+Epoch 0065/0100 | Time 44.555s | Train Acc 0.9979 | Test Acc 0.9940 | Best epoch @ 0061 with Acc 0.9950 | lr: 0.000040
+Epoch 0066/0100 | Time 44.616s | Train Acc 0.9979 | Test Acc 0.9941 | Best epoch @ 0061 with Acc 0.9950 | lr: 0.000040
+Epoch 0067/0100 | Time 44.357s | Train Acc 0.9981 | Test Acc 0.9947 | Best epoch @ 0061 with Acc 0.9950 | lr: 0.000040
+Epoch 0068/0100 | Time 44.032s | Train Acc 0.9982 | Test Acc 0.9928 | Best epoch @ 0061 with Acc 0.9950 | lr: 0.000040
+Epoch 0069/0100 | Time 44.743s | Train Acc 0.9979 | Test Acc 0.9942 | Best epoch @ 0061 with Acc 0.9950 | lr: 0.000040
+Epoch 0070/0100 | Time 44.461s | Train Acc 0.9978 | Test Acc 0.9946 | Best epoch @ 0061 with Acc 0.9950 | lr: 0.000040
+Epoch 0071/0100 | Time 44.399s | Train Acc 0.9983 | Test Acc 0.9933 | Best epoch @ 0061 with Acc 0.9950 | lr: 0.000040
+Epoch 0072/0100 | Time 44.529s | Train Acc 0.9984 | Test Acc 0.9941 | Best epoch @ 0061 with Acc 0.9950 | lr: 0.000040
+Epoch 0073/0100 | Time 43.980s | Train Acc 0.9980 | Test Acc 0.9938 | Best epoch @ 0061 with Acc 0.9950 | lr: 0.000040
+Epoch 0074/0100 | Time 44.457s | Train Acc 0.9977 | Test Acc 0.9943 | Best epoch @ 0061 with Acc 0.9950 | lr: 0.000040
+Epoch 0075/0100 | Time 44.481s | Train Acc 0.9978 | Test Acc 0.9949 | Best epoch @ 0061 with Acc 0.9950 | lr: 0.000040
+Epoch 0076/0100 | Time 44.782s | Train Acc 0.9980 | Test Acc 0.9949 | Best epoch @ 0061 with Acc 0.9950 | lr: 0.000040
+Epoch 0077/0100 | Time 44.391s | Train Acc 0.9979 | Test Acc 0.9934 | Best epoch @ 0061 with Acc 0.9950 | lr: 0.000040
+Epoch 0078/0100 | Time 44.368s | Train Acc 0.9982 | Test Acc 0.9945 | Best epoch @ 0061 with Acc 0.9950 | lr: 0.000040
+Epoch 0079/0100 | Time 44.642s | Train Acc 0.9980 | Test Acc 0.9935 | Best epoch @ 0061 with Acc 0.9950 | lr: 0.000040
+Epoch 0080/0100 | Time 44.493s | Train Acc 0.9982 | Test Acc 0.9931 | Best epoch @ 0061 with Acc 0.9950 | lr: 0.000040
+Epoch 0081/0100 | Time 44.235s | Train Acc 0.9979 | Test Acc 0.9937 | Best epoch @ 0061 with Acc 0.9950 | lr: 0.000040
+Epoch 0082/0100 | Time 44.360s | Train Acc 0.9982 | Test Acc 0.9927 | Best epoch @ 0061 with Acc 0.9950 | lr: 0.000040
+Epoch 0083/0100 | Time 44.407s | Train Acc 0.9981 | Test Acc 0.9938 | Best epoch @ 0061 with Acc 0.9950 | lr: 0.000040
+Epoch 0084/0100 | Time 44.152s | Train Acc 0.9984 | Test Acc 0.9930 | Best epoch @ 0061 with Acc 0.9950 | lr: 0.000040
+Epoch 0085/0100 | Time 44.106s | Train Acc 0.9982 | Test Acc 0.9927 | Best epoch @ 0061 with Acc 0.9950 | lr: 0.000040
+Epoch 0086/0100 | Time 44.559s | Train Acc 0.9978 | Test Acc 0.9928 | Best epoch @ 0061 with Acc 0.9950 | lr: 0.000040
+Epoch 0087/0100 | Time 44.425s | Train Acc 0.9981 | Test Acc 0.9944 | Best epoch @ 0061 with Acc 0.9950 | lr: 0.000040
+Epoch 0088/0100 | Time 44.336s | Train Acc 0.9980 | Test Acc 0.9942 | Best epoch @ 0061 with Acc 0.9950 | lr: 0.000040
+Epoch 0089/0100 | Time 44.467s | Train Acc 0.9979 | Test Acc 0.9946 | Best epoch @ 0061 with Acc 0.9950 | lr: 0.000040
+Epoch 0090/0100 | Time 44.352s | Train Acc 0.9982 | Test Acc 0.9946 | Best epoch @ 0061 with Acc 0.9950 | lr: 0.000008
+Epoch 0091/0100 | Time 44.276s | Train Acc 0.9987 | Test Acc 0.9946 | Best epoch @ 0061 with Acc 0.9950 | lr: 0.000008
+Epoch 0092/0100 | Time 44.695s | Train Acc 0.9985 | Test Acc 0.9942 | Best epoch @ 0061 with Acc 0.9950 | lr: 0.000008
+Epoch 0093/0100 | Time 44.484s | Train Acc 0.9982 | Test Acc 0.9939 | Best epoch @ 0061 with Acc 0.9950 | lr: 0.000008
+Epoch 0094/0100 | Time 44.687s | Train Acc 0.9984 | Test Acc 0.9942 | Best epoch @ 0061 with Acc 0.9950 | lr: 0.000008
+Epoch 0095/0100 | Time 44.290s | Train Acc 0.9982 | Test Acc 0.9941 | Best epoch @ 0061 with Acc 0.9950 | lr: 0.000008
+Epoch 0096/0100 | Time 44.888s | Train Acc 0.9987 | Test Acc 0.9952 | Best epoch @ 0096 with Acc 0.9952 | lr: 0.000008
+Epoch 0097/0100 | Time 44.624s | Train Acc 0.9985 | Test Acc 0.9940 | Best epoch @ 0096 with Acc 0.9952 | lr: 0.000008
+Epoch 0098/0100 | Time 44.562s | Train Acc 0.9983 | Test Acc 0.9943 | Best epoch @ 0096 with Acc 0.9952 | lr: 0.000008
+Epoch 0099/0100 | Time 44.527s | Train Acc 0.9983 | Test Acc 0.9941 | Best epoch @ 0096 with Acc 0.9952 | lr: 0.000008
